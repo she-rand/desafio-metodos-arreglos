@@ -1,0 +1,29 @@
+@import url('https://github.com/necolas/normalize.css/');
+p{
+    margin: 0;
+}
+
+.resumen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    height: 50vh;
+}
+.informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.linea{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+   
+   
+
+}
+.estiloDone{
+    color: red;
+}
