@@ -19,7 +19,6 @@ render=function(arregloTareas){
         textoTareas+=objeto.textoTarea
     });
     tareaMostrar.innerHTML=textoTareas
-    idLista.innerHTML=textoIds
     const ntareas=contarTareas(arregloTareas)
     totalTareasMostrar.textContent=ntareas.cantTotalTareas
     totalRealizadasMostrar.textContent=ntareas.cantRealizadas
@@ -27,12 +26,13 @@ render=function(arregloTareas){
 }
 
 datosTarea=function(objetoTarea){
-    const textoTarea=`<div class="linea ${objetoTarea.isDone? 'estiloDone':''}">
-    <p>${objetoTarea.descripcion}</p> 
-    <input onclick="marcarRealizado(${objetoTarea.id})" type="checkbox" ${objetoTarea.isDone? 'checked':''}/>
-    <button onclick="borrar(${objetoTarea.id})">cancelar</button>
+    const textoTarea=`<div class="linea m-1 ${objetoTarea.isDone? 'estiloDone':''}">
+    <p class="idTarea">${objetoTarea.id}</p>
+    <p class="descripcion">${objetoTarea.descripcion}</p> 
+    <input class="m-2" onclick="marcarRealizado(${objetoTarea.id})" type="checkbox" ${objetoTarea.isDone? 'checked':''}/>
+    <button class="btn btn-danger" onclick="borrar(${objetoTarea.id})">cancelar</button>
 </div>`
-const textoId=`<p>${objetoTarea.id}</p>`
+const textoId=`<p class="m-2">${objetoTarea.id}</p>`
 return {textoId:textoId,textoTarea:textoTarea}
 }
 marcarRealizado=function(id){

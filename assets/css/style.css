@@ -1,6 +1,10 @@
 @import url('https://github.com/necolas/normalize.css/');
 p{
     margin: 0;
+
+}
+main{
+    background-color: gainsboro;
 }
 
 .resumen{
@@ -14,16 +18,23 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: start;
+    
 }
 .linea{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-   
-   
+
+     
 
 }
 .estiloDone{
     color: red;
+}
+.descripcion{
+    width: 30vw;
+}
+.idTarea{
+    width: 5vw;
 }
